@@ -1,7 +1,5 @@
 import { useContext, useEffect, useRef, useState } from 'react';
-import { useSpring } from 'react-spring';
 import { saveList } from './saveList';
-
 import style from './Tile.module.css'
 
 function convertDate(dateString) {
@@ -59,13 +57,6 @@ function Tile(props) {
        }
     },[list,props])
 
-
-    const springLoad = useSpring({
-        opacity : 1,
-        from: {
-            opacity:0,
-        }
-    })
     return ( 
        props.data.avatarImg && 
        <div ref={tileRef} key={props.data.id} className = {style.tile}>

@@ -2,6 +2,27 @@ import style from './Window.module.css'
 import {weekly} from '../api';
 import { useEffect, useState } from 'react';
 import Tile from './Tile';
+import { motion } from "framer-motion";
+
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
 function Window(props) {
     const [week,setWeek] = useState([])
     useEffect(()=>{
@@ -13,15 +34,24 @@ function Window(props) {
     },[])
     
     return(
-        <div>
+        <div className={style.window}>
             <span className={style.title}>Weekly Most Rated</span>
-            <div id={style.rated} className = {style.carrousel}>
+            <motion.div 
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            id={style.rated} className = {style.carrousel}>
                 {
                     week.map(element =>{
-                        return <Tile data = {element}/>
+                        return(
+                            <motion.div
+                            variants={item}>
+                                <Tile data = {element}/>
+                            </motion.div>
+                            )    
                     })
                 }
-            </div>
+            </motion.div>
         </div>
     )
 }

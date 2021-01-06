@@ -1,11 +1,32 @@
 import {fetching} from './api'
-import {useSpring, animated} from 'react-spring'
 import React, {  useEffect, useRef, useState } from 'react';
 import './App.css';
 import Tile from './components/Tile'
 import SavedBubble from './components/SavedBubble';
 import { saveList } from './components/saveList';
 import Window from './components/Window';
+import { motion } from "framer-motion";
+
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
 
 function App() {
 
@@ -17,27 +38,23 @@ function App() {
 
   
   const handleClick = async (event) =>{
+    setToggle(false)
     event.preventDefault();
     if(input){
     let resp = await fetching(input);
     setResponse(resp);
     setToggle(true);
     contentRef.current.scrollIntoView({behavior:'smooth'})
-
     }
   }
-  const springLoad = useSpring({
-    opacity : 1,
-    from: {
-        opacity:0.5,
-    }
-})
+
 
   useEffect(()=>{
+    console.log('Effect')
     let data = localStorage.getItem('fav');
     data = data ? JSON.parse(data) : [];
     setList(data)
-  },[])
+  },[]) 
 
   return (
     <saveList.Provider value={{list,setList}}>
@@ -48,18 +65,24 @@ function App() {
                     <button className={'buttonSearch'} onClick={handleClick}>SEARCH</button>
                   </form>
                 
-                <div ref={contentRef} className={'content'}>
+                {toggle 
+                 && <motion.div 
+                 variants={container}
+                 initial="hidden"
+                 animate="visible"
+                ref={contentRef} className={'content'}>
                     { toggle && response.map(element=>{
                       return (
-                        <div>
-                          <Tile  data ={element}/>
-                          </div>
+                         <motion.div
+                          variants={item}>
+                          <Tile data ={element}/>
+                          </motion.div>
                       )
                     }) }  
-                </div>
+                </motion.div>}
     
    
-       <Window />
+        <Window />
     
     </div>
          
