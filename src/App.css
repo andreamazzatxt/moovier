@@ -8,11 +8,17 @@ font-family: 'Montserrat', sans-serif;
 }
 body::-webkit-scrollbar { width: 0 !important }
 
-
-.App-logo {
-  height: 40vmin;
+.logoHead{
+  width:8rem;
+  height: 8rem;
   pointer-events: none;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.7;
+ 
 }
+
+
 .header{
   height:50vh;
   display: flex;
@@ -22,14 +28,15 @@ body::-webkit-scrollbar { width: 0 !important }
   justify-content: center;
 }
 
+
 .content{
   align-self: center;
   justify-self: center;
   width: 100vw;
   display: flex;
   flex-flow: row wrap;
-  align-content:space-around;
-  justify-content: space-around;
+  align-content: space-around;
+  justify-content: space-evenly;
 
 }
 .input{
@@ -41,6 +48,7 @@ body::-webkit-scrollbar { width: 0 !important }
   color: white;
   outline: none;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   font-family: 'Montserrat', sans-serif;
   transition-duration: 200ms;
 

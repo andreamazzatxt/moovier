@@ -1,7 +1,6 @@
 import style from './SavedBubble.module.css'
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import { saveList } from './saveList';
-import { motion } from "framer-motion";
 
 
 function SavedBubble(props) {
@@ -24,7 +23,7 @@ function SavedBubble(props) {
         localStorage.setItem('fav',JSON.stringify(temp))
     }
     useEffect(()=>{
-        bubbleRef.current.style.width = toggle ? '30rem'  :  '3rem'
+        bubbleRef.current.style.width = toggle ? '26rem'  :  '3rem'
         bubbleRef.current.style.height = toggle ? '20rem'  :  '3rem'
         bubbleRef.current.style.borderRadius = toggle ? '20px' : '50%'
         bubbleRef.current.style.margin = toggle ? '10px' : '';
@@ -38,12 +37,9 @@ function SavedBubble(props) {
          <div ref={bubbleRef} className={style.bubble}>
             {
             !toggle 
-            ? <motion.div 
-            animate={{
-                scale: [1, 2, 2, 1, 1],
-              }}
+            ? <div 
             ref={counterRef}style={props}onClick={handleOpen} className={style.counter}> {list.length}
-            </motion.div>
+            </div>
             : <div className={style.content}>
              <div className={style.header}>
              <span className={style.head}>Your Library</span>

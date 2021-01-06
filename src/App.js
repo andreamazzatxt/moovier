@@ -44,7 +44,7 @@ function App() {
     let resp = await fetching(input);
     setResponse(resp);
     setToggle(true);
-    contentRef.current.scrollIntoView({behavior:'smooth'})
+   contentRef.current.scrollIntoView({block:'end',behavior:'smooth'})
     }
   }
 
@@ -61,6 +61,7 @@ function App() {
  <div id = "App" className="App">
       <SavedBubble />
           <form className = {'header'} onSubmit={handleClick}>
+                    <img alt ='logo' className='logoHead'src='./logo512.png'></img>
                     <input placeholder='  Search...'className={'input'} type='text' onChange={(element)=>{setInput(element.target.value)}}></input>
                     <button className={'buttonSearch'} onClick={handleClick}>SEARCH</button>
                   </form>
