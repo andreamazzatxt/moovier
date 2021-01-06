@@ -1,0 +1,28 @@
+.carrousel{
+    background-color:  transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+
+    font-size: 0.8rem !important;
+}
+
+.title{
+    color:white;
+}
+
+#news{
+    background-color: transparent;
+    width: 100vw;
+    overflow-x: scroll;
+    
+}
+#rated{
+    background-color: transparent;
+    width: 100vw;
+    overflow: scroll;
+}
+#news::-webkit-scrollbar { width: 0 !important }
+#rated::-webkit-scrollbar { width: 0 !important }
+
+
