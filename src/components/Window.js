@@ -45,6 +45,7 @@ function Window(props) {
                     week.map(element =>{
                         return(
                             <motion.div
+                            key={element.id+"tile"}
                             variants={item}>
                                 <Tile data = {element}/>
                             </motion.div>

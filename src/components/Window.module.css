@@ -4,6 +4,8 @@
     flex-flow: row nowrap;
     width: 100%;
     font-size: 0.8rem !important;
+    max-height: 35rem;
+    height: 40rem;
 
 }
 .window{
@@ -28,7 +30,7 @@
 #rated{
     background-color: transparent;
     width: 100vw;
-    overflow: scroll;
+    overflow-x: scroll;
 }
 #news::-webkit-scrollbar { width: 0 !important }
 #rated::-webkit-scrollbar { width: 0 !important }

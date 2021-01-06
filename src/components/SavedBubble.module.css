@@ -14,7 +14,7 @@
     transition-duration: 100ms;
     position: sticky;
     z-index: 18;
-    overflow: scroll;
+    overflow-y: scroll;
     margin: 0;
     padding: 0;
 
@@ -28,18 +28,18 @@
 }
 .counter{
     position: relative;
-    margin-top: 30%;
     padding:0;
     cursor:pointer;
 
 }
 .content{
     height: 100%;
+    width: 20rem;
 }
 
 .close{
+    height: 1.5rem;
     width: 1.5rem;
-    margin-left: 1rem;
     z-index: 3;
     cursor:pointer;
 
@@ -49,14 +49,15 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: space-around;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-left:5px;
-    padding-right:5px;
+    height: 3rem;
+    width: 20rem;
+    border-bottom: solid lightgray;
+    border-bottom-width: 1px;
 
 }
 .head{
-    margin-left: 5px;
+    height: 1rem;
+    width: 10rem;
 }
 .miniTile{
 display: flex;
@@ -66,21 +67,23 @@ align-content: space-around;
 border-bottom: solid lightgray;
 border-bottom-width: 1px;
 margin: 5px;
-padding: 5px;
+height: 10rem;
+width: 20rem
 }
 .img{
-    height:auto ;
-    width:6vw;
-    padding: 1vh;
+    height:6rem ;
+    width:4rem;
+    padding: 5px;
 }
 .title{
     height: 1.2rem;
-    width:30vw;
+    width:12rem;
     margin-top: 1rem;
     overflow-y:hidden;
     text-overflow:ellipsis;
 }
 .delete{
+    height: 1.5rem;
     width: 1.5rem;
     cursor:pointer;
 

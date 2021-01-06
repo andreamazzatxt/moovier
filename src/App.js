@@ -74,6 +74,7 @@ function App() {
                     { toggle && response.map(element=>{
                       return (
                          <motion.div
+                         key={element.id+'search'}
                           variants={item}>
                           <Tile data ={element}/>
                           </motion.div>

@@ -11,12 +11,17 @@
     font-weight: bold;
     transition-duration: 200ms;
     position: relative;
-    max-height: 68vh ;
-
+    width:10rem;
+    height: 15rem;
 }
+.resume{
+    height: 15rem;
+    overflow-y: scroll;
+}
+.resume::-webkit-scrollbar { width: 0 !important }
 .img{
-    height: auto;
-    width: 20vw;
+    height: 15rem;
+    width: 10rem;
     object-fit:contain;
 }
 .tile:hover{
@@ -26,9 +31,13 @@
     margin:1.5vh;
 }
 .text{
-    width: 65vw;
+    height: 30rem;
+    width: 25rem;
     margin: 1rem;
-    overflow-y:scroll;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-content: space-around;
 }
 .text::-webkit-scrollbar { width: 0 !important }
 .icon{
@@ -36,6 +45,8 @@
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
+    align-self: center;
+
   
 }
 .icon:hover{
@@ -45,7 +56,6 @@
     width: 1.5rem;
     height: 1.5rem; 
     cursor: pointer;
-    padding-left: 90%;
 }
 .close:hover{
     opacity: 0.5;
