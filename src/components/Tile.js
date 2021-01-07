@@ -16,11 +16,18 @@ function Tile(props) {
     const imgRef = useRef();
     const handleClick = () =>{
         imgRef.current.style.opacity = 0
-         document.getElementById('App').style.backgroundImage = props.data.backImg && `url(${props.data.backImg})` 
-        tileRef.current.style.width= '40rem';
+        document.getElementById('App').style.backgroundImage = props.data.backImg && `url(${props.data.backImg})` 
         
-         setTimeout(()=>{
-           setClicked(true);  
+        if(window.matchMedia("(min-width: 600px)").matches){
+            tileRef.current.style.width= '40rem';
+        }else{
+            tileRef.current.style.height= '35rem';
+        }
+        
+        
+        
+        setTimeout(()=>{
+        setClicked(true);  
         imgRef.current.style.opacity = 1
         },500) 
         
