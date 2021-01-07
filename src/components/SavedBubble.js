@@ -23,11 +23,12 @@ function SavedBubble(props) {
         localStorage.setItem('fav',JSON.stringify(temp))
     }
     useEffect(()=>{
-        bubbleRef.current.style.width = toggle ? '26rem'  :  '3rem'
+        bubbleRef.current.style.width = toggle ? '22rem'  :  '3rem'
         bubbleRef.current.style.height = toggle ? '20rem'  :  '3rem'
         bubbleRef.current.style.borderRadius = toggle ? '20px' : '50%'
         bubbleRef.current.style.margin = toggle ? '10px' : '';
         bubbleRef.current.style.top = toggle ? '50px' : '';
+        
     },[toggle])
 
     

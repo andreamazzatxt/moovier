@@ -11,7 +11,7 @@ export async function fetching(look){
      let result = await response.results.map(element =>{
         return {
             id: element.id,
-            title: element.title,
+            title: element.title !== undefined ? element.title : element.name,
             resume: element.overview,
             avatarImg : element.poster_path ?  imgUrl+element.poster_path : '',
             backImg: element.backdrop_path ?  imgUrl+element.backdrop_path : '',
@@ -54,7 +54,7 @@ export async function tvWeekly(){
     let result = await response.results.map(element =>{
         return {
             id: element.id,
-            title: element.title,
+            title: element.name,
             resume: element.overview,
             avatarImg : element.poster_path ?  imgUrl+element.poster_path : '',
             backImg: element.backdrop_path ?  imgUrl+element.backdrop_path : '',

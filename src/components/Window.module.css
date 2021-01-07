@@ -22,8 +22,8 @@
     margin: 10px;
     align-self: flex-start;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
+    font-family: 'Roboto', sans-serif;    
+    font-weight: 300;}
 
 #news{
     background-color: transparent;

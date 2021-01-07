@@ -61,9 +61,11 @@ function App() {
       <SavedBubble />
           <form className = {'header'} onSubmit={handleClick}>
                     <img alt ='logo' className='logoHead'src='./logo512.png'></img>
-                    <input placeholder='  Search...'className={'input'} type='text' onChange={(element)=>{setInput(element.target.value)}}></input>
-                    <button className={'buttonSearch'} onClick={handleClick}>SEARCH</button>
-                  </form>
+                    <div className={'inputBox'}>
+                      <i id='iconMag' class="fas fa-search"></i>
+                      <input className='input' type='text' onChange={(element)=>{setInput(element.target.value)}}></input>
+                      </div>
+                 </form>
                 
                 {toggle 
                  && <motion.div 

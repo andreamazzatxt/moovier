@@ -43,7 +43,7 @@ function Window(props) {
     
     return(
         <div className={style.window}>
-            <span className={style.title}>Weekly trending Moovies</span>
+            <span className={style.title}>Weekly trending Movies</span>
             <motion.div 
             variants={container}
             initial="hidden"

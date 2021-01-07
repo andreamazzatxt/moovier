@@ -13,6 +13,9 @@
     position: relative;
     width:10rem;
     height: 15rem;
+    font-family: 'Roboto', sans-serif;    
+    font-weight:400;
+    font-size: 0.8rem;
 }
 .resume{
     height: 8rem;

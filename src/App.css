@@ -1,23 +1,24 @@
 .App {
 text-align: center;
-background-color: black;
+background-color: #000000;
+background-image: linear-gradient(135deg, #000000 0%, #575c6f 71%, #fdfdfd 100%);
 background-attachment: fixed;
 background-size: cover;
-font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-weight: 200 ;
 
 }
 body::-webkit-scrollbar { width: 0 !important }
 
 .logoHead{
-  width:8rem;
-  height: 8rem;
+  widows: 10rem;
+  height: 10rem;
   pointer-events: none;
   justify-self: center;
   align-self: center;
-  opacity: 0.7;
+
  
 }
-
 
 .header{
   height:50vh;
@@ -39,35 +40,53 @@ body::-webkit-scrollbar { width: 0 !important }
   justify-content: space-evenly;
 
 }
-.input{
+.inputBox{
   background-color:  transparent;
   border-radius: 40px;
-  border: solid white 3px;
-  padding: 10px;
+  border: solid white 2px;
+  
   font-size: 2rem;
   color: white;
   outline: none;
+  padding:10px;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  font-family: 'Montserrat', sans-serif;
   transition-duration: 200ms;
+  width: 50vw;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  
 
 }
-.input:hover{
-  border-color: grey;
+.input{
+  font-size: 2rem;
+  background-color: transparent;
+  border:none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+  
+  width:40vw;
+}
+#iconMag{
+  align-self: center;
 }
 .buttonSearch{
-  color: lightgray;
+  color: grey;
   background-color: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); 
   outline: none;
   border: none;
-  padding: 10px;
+  padding: 15px;
   border-radius: 40px;
   font-weight: bold;
   align-self: center;
-  font-family: 'Montserrat', sans-serif;
-  transition-duration: 200ms;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  transition-duration: 300ms;
   
 }
 .buttonSearch:hover{
@@ -75,7 +94,7 @@ body::-webkit-scrollbar { width: 0 !important }
 }
 
 @media only screen and (max-width: 600px) {
-  .logoHead{
-    display:none;
+  .inputBox{
+    width: 80vw;
   }
 }
