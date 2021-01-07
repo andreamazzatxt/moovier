@@ -11,11 +11,12 @@ font-weight: 200 ;
 body::-webkit-scrollbar { width: 0 !important }
 
 .logoHead{
-  widows: 10rem;
-  height: 10rem;
+  widows: 12rem;
+  height: 12rem;
   pointer-events: none;
   justify-self: center;
   align-self: center;
+  padding-bottom: 5vh
 
  
 }
@@ -53,6 +54,7 @@ body::-webkit-scrollbar { width: 0 !important }
   margin-top: 1rem;
   transition-duration: 200ms;
   width: 50vw;
+
   display: flex;
   flex-flow: row wrap;
   align-content: space-around;
@@ -73,6 +75,7 @@ body::-webkit-scrollbar { width: 0 !important }
 }
 #iconMag{
   align-self: center;
+  
 }
 .buttonSearch{
   color: grey;

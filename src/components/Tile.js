@@ -15,13 +15,12 @@ function Tile(props) {
     const closeRef = useRef();
     const imgRef = useRef();
     const handleClick = () =>{
-        imgRef.current.style.opacity = 0
-        document.getElementById('App').style.backgroundImage = props.data.backImg && `url(${props.data.backImg})` 
-        
+        imgRef.current.style.opacity = 0        
         if(window.matchMedia("(min-width: 600px)").matches){
             tileRef.current.style.width= '40rem';
         }else{
             tileRef.current.style.height= '35rem';
+            document.getElementById('App').style.backgroundImage = props.data.backImg && `url(${props.data.backImg})` 
         }
         
         
