@@ -18,11 +18,11 @@ function Tile(props) {
         imgRef.current.style.opacity = 0
          document.getElementById('App').style.backgroundImage = props.data.backImg && `url(${props.data.backImg})` 
         tileRef.current.style.width= '40rem';
-        tileRef.current.style.height= '35rem';
-        setClicked(true);
-        setTimeout(()=>{
+        
+         setTimeout(()=>{
+           setClicked(true);  
         imgRef.current.style.opacity = 1
-        },500)
+        },500) 
         
       
     }
@@ -82,7 +82,6 @@ function Tile(props) {
            {
                clicked &&
                  <div ref={infoRef}className={style.text}>
-                 <h1 className={style.title}>{props.data.title}</h1>
                  <p className={style.resume}>{props.data.resume ? props.data.resume : "Cooming soon..."}</p>
                  <p className={style.date}>{props.data.date && convertDate(props.data.date)}</p> 
                  {  !toggleSave ?  

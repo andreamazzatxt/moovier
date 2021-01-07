@@ -28,7 +28,6 @@ function SavedBubble(props) {
         bubbleRef.current.style.borderRadius = toggle ? '20px' : '50%'
         bubbleRef.current.style.margin = toggle ? '10px' : '';
         bubbleRef.current.style.top = toggle ? '50px' : '';
-        bubbleRef.current.style.paddingTop = toggle? '30px' : '';
     },[toggle])
 
     

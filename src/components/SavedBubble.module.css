@@ -42,8 +42,8 @@
     width: 1.5rem;
     z-index: 3;
     cursor:pointer;
-    opacity: 0.7;
-
+    opacity: 0.5;
+    align-self: center;
 }
 .close:hover{
     opacity: 1;
@@ -62,6 +62,7 @@
 .head{
     height: 1rem;
     width: 10rem;
+    align-self: center;
 }
 .miniTile{
 display: flex;
@@ -71,26 +72,28 @@ align-content: space-around;
 border-bottom: solid lightgray;
 border-bottom-width: 1px;
 margin: 5px;
-height: 10rem;
+height: 7rem;
 width: 20rem
 }
 .img{
     height:6rem ;
     width:4rem;
     padding: 5px;
+    align-self: center;
 }
 .title{
     height: 1.2rem;
     width:12rem;
-    margin-top: 1rem;
     overflow-y:hidden;
     text-overflow:ellipsis;
+    align-self: center;
 }
 .delete{
     height: 1.5rem;
     width: 1.5rem;
     cursor:pointer;
     opacity: 0.7;
+    align-self: center;
 
 
 }

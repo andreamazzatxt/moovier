@@ -44,7 +44,7 @@ function App() {
     let resp = await fetching(input);
     setResponse(resp);
     setToggle(true);
-   contentRef.current.scrollIntoView({block:'end',behavior:'smooth'})
+   //contentRef.current.scrollIntoView({block:'center',behavior:'smooth'})
     }
   }
 

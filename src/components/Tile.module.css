@@ -1,21 +1,21 @@
 .tile{
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);;
-    padding: 2vh;
+    padding: 0.5rem;
     border-radius: 10px;
     display:flex;
     flex-flow: row wrap;
     align-content: space-around;
     justify-content: space-around;
-    margin: 2vh;
+    margin: 0.8rem;
     font-weight: bold;
-    transition-duration: 300ms;
+    transition: all .5s ease-in-out;
     position: relative;
     width:10rem;
     height: 15rem;
 }
 .resume{
-    height: 15rem;
+    height: 8rem;
     overflow-y: scroll;
 }
 .resume::-webkit-scrollbar { width: 0 !important }
@@ -23,28 +23,37 @@
     height: 15rem;
     width: 10rem;
     object-fit:contain;
-    transition-duration: 200ms;
+    transition-duration: 300ms;
+    align-self: center;
+   
+
 }
 .tile:hover{
     background-color: rgba(255, 255, 255, 0.356);
     backdrop-filter: blur(5px);;
-    padding: 2.5vh;
-    margin:1.5vh;
+    padding: 0.8rem;
+    margin: 0.5rem;
 }
 .text{
-    height: 30rem;
-    width: 25rem;
+    height: 14rem;
+    width: 23rem;
     margin: 1rem;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     align-content: space-around;
 }
+.title{
+    height:1rem;
+}
+.date{
+    height: 1rem;
+}
 .text::-webkit-scrollbar { width: 0 !important }
 .icon{
  
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
     cursor: pointer;
     align-self: center;
     opacity: 0.7;
@@ -58,8 +67,9 @@
     width: 1.5rem;
     height: 1.5rem; 
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.5;
+    align-self: center;
 }
 .close:hover{
-    opacity: 0.5;
+    opacity: 1;
 }
