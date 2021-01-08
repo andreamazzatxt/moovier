@@ -8,6 +8,7 @@ export async function fetching(look){
     let uri = "https://api.themoviedb.org/3/search/multi?api_key="+key+"&language=en&query="+look+"&page="+page+"&include_adult=false";
     let response =  await fetch(uri);
          response = await response.json()
+         console.log(response)
      let result = await response.results.map(element =>{
         return {
             id: element.id,
@@ -20,7 +21,7 @@ export async function fetching(look){
         }
     }) 
     finalResult = finalResult.concat(...result);
-        if(page === response.total_pages){
+        if(page === response.total_pages || response.total_results === 0 || page > 10){
             break;
         }else{
             page++

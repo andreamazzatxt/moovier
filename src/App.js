@@ -35,6 +35,7 @@ function App() {
  const [toggle,setToggle] = useState(false) ;
  const [list,setList] = useState([])
  const contentRef = useRef();
+ const inputRef = useRef();
 
   
   const handleClick = async (event) =>{
@@ -43,13 +44,23 @@ function App() {
     if(input){
     let resp = await fetching(input);
     setResponse(resp);
-    setToggle(true);
+    if(resp.length === 0){
+      inputRef.current.style.borderColor = 'red'
+      console.log('red')
+    }else{
+      setToggle(true);
     }
+    
+    }
+  }
+
+  const handleChange = (element) =>{
+    inputRef.current.style.borderColor = 'white'
+    setInput(element.target.value)
   }
 
 
   useEffect(()=>{
-    console.log('Effect')
     let data = localStorage.getItem('fav');
     data = data ? JSON.parse(data) : [];
     setList(data)
@@ -61,9 +72,9 @@ function App() {
       <SavedBubble />
           <form className = {'header'} onSubmit={handleClick}>
                     <img alt ='logo' className='logoHead'src='./logo512.png'></img>
-                    <div className={'inputBox'}>
-                      <i id='iconMag' class="fas fa-search"></i>
-                      <input className='input' type='text' onChange={(element)=>{setInput(element.target.value)}}></input>
+                    <div ref={inputRef}className={'inputBox'}>
+                      <i id='iconMag' className="fas fa-search"></i>
+                      <input className='input' type='text' onChange={handleChange}></input>
                       </div>
                  </form>
                 
@@ -75,7 +86,7 @@ function App() {
                 ref={contentRef} className={'content'}>
                     { toggle && response.map(element=>{
                       return (
-                         <motion.div
+                         element.avatarImg && <motion.div
                          key={element.id+'search'}
                           variants={item}>
                           <Tile data ={element}/>

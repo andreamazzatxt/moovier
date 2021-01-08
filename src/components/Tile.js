@@ -18,9 +18,10 @@ function Tile(props) {
         imgRef.current.style.opacity = 0        
         if(window.matchMedia("(min-width: 600px)").matches){
             tileRef.current.style.width= '40rem';
+            document.getElementById('App').style.backgroundImage = props.data.backImg && `url(${props.data.backImg})` 
+    
         }else{
             tileRef.current.style.height= '35rem';
-            document.getElementById('App').style.backgroundImage = props.data.backImg && `url(${props.data.backImg})` 
         }
         
         
