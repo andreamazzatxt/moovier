@@ -10,12 +10,17 @@
     height: 18rem;
 
 }
+.carrousel::-webkit-scrollbar { width: 0 !important }
+.carrousel::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+  }
 .window{
     padding-top: 10vh;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-flow: column wrap;
 }
+.window::-webkit-scrollbar { width: 0 !important }
 .tileContainer{
     display:flex;
     flex-flow: row;
@@ -74,8 +79,10 @@
     background-color: transparent;
     width: 100vw;
     overflow-x: scroll;
+    overflow-y: scroll;
 }
 #news::-webkit-scrollbar { width: 0 !important }
 #rated::-webkit-scrollbar { width: 0 !important }
+
 
 
