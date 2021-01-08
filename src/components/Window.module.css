@@ -1,11 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .carrousel{
     background-color: transparent;
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
     font-size: 0.8rem !important;
-    max-height: 35rem;
-    height: 19rem;
+    height: 18rem;
 
 }
 .window{
@@ -14,16 +16,53 @@
     display: flex;
     flex-flow: column wrap;
 }
+.tileContainer{
+    display:flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: center;
+
+   
+}
+.rank{
+    background: -webkit-linear-gradient(rgb(254, 0, 0), rgb(0, 143, 163));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -1px -1px 28px rgba(185, 44, 44, 0.3);
+    align-self: center;
+    justify-self: center;
+    background-color: transparent;
+    height: 20rem;
+    width: 10rem;
+    font-size: 20rem;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    opacity: 0.8;
+    text-align: center;
+    position: relative;
+    bottom : 1rem;
+    letter-spacing: -0.2em;
+    transition-duration: 200ms;
+    cursor:none;
+}
+.rank:hover{
+    text-shadow: -1px -1px 28px rgba(150, 150, 150, 0.3);
+    opacity:0.9;
+}
 
 .title{
-    color:white;
+    color: white;
     font-size: 2rem;
     padding: 10px;
     margin: 10px;
     align-self: flex-start;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;    
-    font-weight: 300;}
+    font-weight: 300;
+    
+}
+   
 
 #news{
     background-color: transparent;

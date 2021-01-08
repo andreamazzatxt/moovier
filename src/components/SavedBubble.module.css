@@ -10,8 +10,8 @@
     justify-content: center;
     color: white;
     font-family: 'Roboto', sans-serif;    
-    font-weight: 300;
-    transition-duration: 100ms;
+    font-weight: 500;
+    transition-duration: 200ms;
     position: sticky;
     z-index: 18;
     overflow-y: scroll;

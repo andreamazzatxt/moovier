@@ -28,7 +28,7 @@
     object-fit:contain;
     transition-duration: 300ms;
     align-self: center;
-   
+   cursor:pointer;
 
 }
 .tile:hover{
